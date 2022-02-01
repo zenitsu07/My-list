@@ -3,22 +3,24 @@ import React from 'react';
 import Todo from './Todo'
 
 //passing parameter todos now you can access each entry
- const TodoList = ({todos, setTodos}) => {
+ const TodoList = ({todos, setTodos,  filtertodos}) => {
     //since each input is catched in array of objects So map through it and render a todo component to each
     return (
         <div className="todo-container">
             <ul className="todo-list">
                 {/*Syntax-> todos.map(element => ())  */}
-                {
-                    todos.map( element => (
-                        <Todo text = { element.text}
-                        key = { element.id}      
-                        todos = { todos }
-                        element = { element }//This shows what element  we are currently on and can acessed in Todo component now
-                        setTodos= { setTodos }
-                        
-                />
-                ))}
+                {/* returning a mapped array */}
+                
+                {filtertodos.map( element => (
+
+                    <Todo text = { element.text}
+                    key = { element.id}      
+                    todos = { todos }
+                    element = { element }//This shows what element  we are currently on and can acessed in Todo component now
+                    setTodos= { setTodos }
+                    />
+                    ))
+                }
                 
             </ul>
         </div>

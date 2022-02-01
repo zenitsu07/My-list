@@ -11,7 +11,7 @@ body {
 }
 header {
   font-size: 2rem;
-}
+} 
 
 header,
 form {
@@ -132,9 +132,8 @@ select {
   cursor: pointer;
   pointer-events: none;
 }
-/* Transition */
-/*
+/* Transition */ */
+
 .select:hover::after {
   transform: scale(1.5);
 }
-*/
